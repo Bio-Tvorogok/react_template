@@ -1,5 +1,5 @@
 import React from "react";
-import {UserComponent} from "@craftjs/core";
+import {useNode, UserComponent} from "@craftjs/core";
 
 type TextProps = {
   text: string
@@ -7,8 +7,9 @@ type TextProps = {
 }
 
 export const Text: UserComponent<TextProps> = ({text, fontSize}) => {
+  const { connectors: {connect, drag} } = useNode();
   return (
-    <div>
+    <div ref={ref => connect(drag(ref as HTMLElement))}>
       <p style={{fontSize}}>{text}</p>
     </div>
   )
