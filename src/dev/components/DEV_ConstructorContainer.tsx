@@ -1,14 +1,14 @@
 // @flow
 import * as React from 'react';
 import {Grid, Paper} from "@material-ui/core";
-import {Container} from "./life/Container";
-import {Card} from "./life/Card";
-import {Button} from "./life/Button";
-import {Toolbox} from "./tools/ToolBox";
-import {SettingsPanel} from "./tools/SettingsPanel";
-import {Text} from "./life/Text";
+import {Container} from "../../components/dev/life/Container";
+import {Card} from "../../components/dev/life/Card";
+import {Button} from "../../components/dev/life/Button";
+import {Toolbox} from "../../components/dev/tools/ToolBox";
+import {SettingsPanel} from "../../components/dev/tools/SettingsPanel";
+import {Text} from "../../components/dev/life/Text";
 import {Element, Frame} from "@craftjs/core";
-import {Topbar} from "./tools/TopBar";
+import {Topbar} from "../../components/dev/tools/TopBar";
 
 type Props = {
 
@@ -19,11 +19,11 @@ export const DevConstructorContainer = (props: Props) => {
       <Topbar />
       <Grid item xs>
         <Frame>
-          <Element padding={5} background="#eee" is={Container} canvas>
+          <Element padding={5} background="src/components/dev#eee" is={Container} canvas>
             <Card background={"white"} />
             <Button size={"small"} text={"hi lol"}>Click</Button>
             <Text fontSize={2} text={"hi text"} />
-            <Element padding={5} background="#eee" is={Container} canvas>
+            <Element padding={5} background="src/components/dev#eee" is={Container} canvas>
               <Text fontSize={2} text={"hi text"} />
             </Element>
           </Element>
